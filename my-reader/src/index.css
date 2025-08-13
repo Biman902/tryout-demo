@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --bg-library-light: #ffffff;
+  --bg-library-cream: #f9f7f1;
+
+  --bg-reader-light: #f8f5e7;
+  --text-reader-light: #262626;
+
+  --bg-reader-sepia: #f3e6d0;
+  --text-reader-sepia: #2b2b2b;
+
+  --bg-reader-dark: #0e0f12;
+  --text-reader-dark: #e6e6e6;
+
+  --muted: #666666;
+  --accent: #3b82f6;
+  --accent-strong: #2563eb;
+  --card-bg-dark: #1a1a1a;
+}
+
+/* Reader transitions */
+.page-transition-enter {
+  transform: translateX(100%);
+  opacity: 0.4;
+}
+.page-transition-enter-active {
+  transform: translateX(0%);
+  opacity: 1;
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+.page-transition-exit {
+  transform: translateX(0%);
+  opacity: 1;
+}
+.page-transition-exit-active {
+  transform: translateX(-25%);
+  opacity: 0.4;
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+/* Utility shadows consistent with spec */
+.shadow-card {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+.shadow-card-hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.16);
+}
+
+/* Scrollbar subtle styling */
+::-webkit-scrollbar { height: 8px; width: 8px; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
